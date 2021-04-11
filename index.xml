@@ -1,50 +1,165 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>successli</title>
     <link>/</link>
-    <description>Recent content on successli</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>successli</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>welcome 3</title>
       <link>/posts/welcome-to-mweb2/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>/posts/welcome-to-mweb2/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;欢迎使用 MWeb&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;欢迎使用 MWeb&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;欢迎使用-mweb&#34;&gt;欢迎使用 MWeb&lt;/h2&gt;
+&lt;p&gt;MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：&lt;/p&gt;
+&lt;h2 id=&#34;软件本身&#34;&gt;软件本身：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用原生的 macOS 技术打造，追求与系统的完美结合。&lt;/li&gt;
+&lt;li&gt;原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-语法&#34;&gt;Markdown 语法：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 GitHub Flavored Markdown 语法，简称 GFM 语法。&lt;/li&gt;
+&lt;li&gt;支持表格、TOC、LaTeX、代码块、任务列表、脚注等。&lt;/li&gt;
+&lt;li&gt;画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-辅助&#34;&gt;Markdown 辅助：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。&lt;/li&gt;
+&lt;li&gt;在兼容 Markdown 语法的情况下支持设置图片宽度。&lt;/li&gt;
+&lt;li&gt;好用的表格插入和 LaTeX 书写辅助。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-输出&#34;&gt;Markdown 输出：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持导出为图片、HTML、Epub、PDF、RTF、Docx。&lt;/li&gt;
+&lt;li&gt;支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。&lt;/li&gt;
+&lt;li&gt;图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS和自定义的图床服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-笔记&#34;&gt;Markdown 笔记：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。&lt;/li&gt;
+&lt;li&gt;快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。&lt;/li&gt;
+&lt;li&gt;快速搜索：目前已支持全局快捷键调出搜索。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;外部-markdown-文档&#34;&gt;外部 Markdown 文档：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mweb-文档&#34;&gt;MWeb 文档：&lt;/h2&gt;
+&lt;p&gt;如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：&lt;a href=&#34;https://zh.mweb.im/help.html&#34;&gt;https://zh.mweb.im/help.html&lt;/a&gt;。我们建议在使用文档库之前，一定要阅读一下 &lt;a href=&#34;https://zh.mweb.im/mweb-library.html&#34;&gt;MWeb 文档库详细介绍&lt;/a&gt; 这篇文章，以便更好的使用文档库。&lt;/p&gt;
+&lt;h2 id=&#34;帮助我们改进-mweb&#34;&gt;帮助我们改进 MWeb&lt;/h2&gt;
+&lt;p&gt;如果你喜欢 MWeb，想让它变得更好，你可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;推荐 MWeb，让更多的人知道。&lt;/li&gt;
+&lt;li&gt;给我们发反馈和建议：&lt;a href=&#34;mailto:coderforart+2333@gmail.com&#34;&gt;coderforart+2333@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在 Mac App Store 上评价 （如果是在 MAS 上购买的话）。&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
       <title>welcome 2</title>
       <link>/posts/welcome-to-mweb1/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      
       <guid>/posts/welcome-to-mweb1/</guid>
-      <description>欢迎使用 MWeb MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：
-软件本身：  使用原生的 macOS 技术打造，追求与系统的完美结合。 原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。  Markdown 语法：  使用 GitHub Flavored Markdown 语法，简称 GFM 语法。 支持表格、TOC、LaTeX、代码块、任务列表、脚注等。 画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。  Markdown 辅助：  支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。 在兼容 Markdown 语法的情况下支持设置图片宽度。 好用的表格插入和 LaTeX 书写辅助。  Markdown 输出：  支持导出为图片、HTML、Epub、PDF、RTF、Docx。 支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。 图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS和自定义的图床服务。  Markdown 笔记：  强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。 快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。 快速搜索：目前已支持全局快捷键调出搜索。  外部 Markdown 文档：  外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。  MWeb 文档： 如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：https://zh.</description>
-    </item>
-    
-    <item>
-      <title>关于</title>
-      <link>/about/</link>
-      <pubDate>Sat, 10 Apr 2021 21:05:32 +0800</pubDate>
-      
-      <guid>/about/</guid>
-      <description>关于本站  个人博客，欢迎留言  关于作者  :boy: 程序猿一枚 :video_game: 喜欢王者 :man_singer: 喜欢唱歌，最喜欢李健老师的歌 :computer: 软件迷，喜欢各种好玩实用的软件、工具、app  关于版权 本站所有的原创文章均受 创作共享 署名-非商业性 4.0 许可协议 / CC BY-NC 4.0 保护。
-任何个人及媒体在转载本站原创内容（包含文字、自制图像、摄影作品）时请遵守以下版权要求:
- 注明转载 注明来源为本站域名（successli.github.io），或转载内容所在的完整网址  本站图片，除原创作品之外，多数来自互联网。 此类图片的原版权所有者可在任何时候、以任何理由要求本站停止使用有关图片，其中包括被本站编辑（比如加注说明）过的图片， 联系方式见本站首页。</description>
+      <description>&lt;h1 id=&#34;欢迎使用-mweb&#34;&gt;欢迎使用 MWeb&lt;/h1&gt;
+&lt;p&gt;MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：&lt;/p&gt;
+&lt;h2 id=&#34;软件本身&#34;&gt;软件本身：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用原生的 macOS 技术打造，追求与系统的完美结合。&lt;/li&gt;
+&lt;li&gt;原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-语法&#34;&gt;Markdown 语法：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 GitHub Flavored Markdown 语法，简称 GFM 语法。&lt;/li&gt;
+&lt;li&gt;支持表格、TOC、LaTeX、代码块、任务列表、脚注等。&lt;/li&gt;
+&lt;li&gt;画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-辅助&#34;&gt;Markdown 辅助：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。&lt;/li&gt;
+&lt;li&gt;在兼容 Markdown 语法的情况下支持设置图片宽度。&lt;/li&gt;
+&lt;li&gt;好用的表格插入和 LaTeX 书写辅助。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-输出&#34;&gt;Markdown 输出：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持导出为图片、HTML、Epub、PDF、RTF、Docx。&lt;/li&gt;
+&lt;li&gt;支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。&lt;/li&gt;
+&lt;li&gt;图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS和自定义的图床服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-笔记&#34;&gt;Markdown 笔记：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。&lt;/li&gt;
+&lt;li&gt;快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。&lt;/li&gt;
+&lt;li&gt;快速搜索：目前已支持全局快捷键调出搜索。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;外部-markdown-文档&#34;&gt;外部 Markdown 文档：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mweb-文档&#34;&gt;MWeb 文档：&lt;/h2&gt;
+&lt;p&gt;如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：&lt;a href=&#34;https://zh.mweb.im/help.html&#34;&gt;https://zh.mweb.im/help.html&lt;/a&gt;。我们建议在使用文档库之前，一定要阅读一下 &lt;a href=&#34;https://zh.mweb.im/mweb-library.html&#34;&gt;MWeb 文档库详细介绍&lt;/a&gt; 这篇文章，以便更好的使用文档库。&lt;/p&gt;
+&lt;h2 id=&#34;帮助我们改进-mweb&#34;&gt;帮助我们改进 MWeb&lt;/h2&gt;
+&lt;p&gt;如果你喜欢 MWeb，想让它变得更好，你可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;推荐 MWeb，让更多的人知道。&lt;/li&gt;
+&lt;li&gt;给我们发反馈和建议：&lt;a href=&#34;mailto:coderforart+2333@gmail.com&#34;&gt;coderforart+2333@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在 Mac App Store 上评价 （如果是在 MAS 上购买的话）。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
       <title>welcome 1</title>
       <link>/posts/welcome-to-mweb/</link>
       <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
-      
       <guid>/posts/welcome-to-mweb/</guid>
-      <description>欢迎使用 MWeb MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：
-软件本身：  使用原生的 macOS 技术打造，追求与系统的完美结合。 原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。  Markdown 语法：  使用 GitHub Flavored Markdown 语法，简称 GFM 语法。 支持表格、TOC、LaTeX、代码块、任务列表、脚注等。 画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。  Markdown 辅助：  支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。 在兼容 Markdown 语法的情况下支持设置图片宽度。 好用的表格插入和 LaTeX 书写辅助。  Markdown 输出：  支持导出为图片、HTML、Epub、PDF、RTF、Docx。 支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。 图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS和自定义的图床服务。  Markdown 笔记：  强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。 快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。 快速搜索：目前已支持全局快捷键调出搜索。  外部 Markdown 文档：  外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。  MWeb 文档： 如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：https://zh.</description>
+      <description>&lt;h1 id=&#34;欢迎使用-mweb&#34;&gt;欢迎使用 MWeb&lt;/h1&gt;
+&lt;p&gt;MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件，目前已支持 Mac，iPad 和 iPhone。MWeb 有以下特色：&lt;/p&gt;
+&lt;h2 id=&#34;软件本身&#34;&gt;软件本身：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用原生的 macOS 技术打造，追求与系统的完美结合。&lt;/li&gt;
+&lt;li&gt;原则上，首先是追求界面简洁和高性能，然后才是强大易用，功能全面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-语法&#34;&gt;Markdown 语法：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 GitHub Flavored Markdown 语法，简称 GFM 语法。&lt;/li&gt;
+&lt;li&gt;支持表格、TOC、LaTeX、代码块、任务列表、脚注等。&lt;/li&gt;
+&lt;li&gt;画图库支持 mermaid, viz, ECharts, PlantUML, Sequence, Flow。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-辅助&#34;&gt;Markdown 辅助：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持截图并粘贴、复制并粘贴、拖拽等方式插入图片并直接显示在编辑器内。&lt;/li&gt;
+&lt;li&gt;在兼容 Markdown 语法的情况下支持设置图片宽度。&lt;/li&gt;
+&lt;li&gt;好用的表格插入和 LaTeX 书写辅助。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-输出&#34;&gt;Markdown 输出：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持导出为图片、HTML、Epub、PDF、RTF、Docx。&lt;/li&gt;
+&lt;li&gt;支持发布到 WordPress、支持 Metaweblog API 协议的服务、Wordpress.com、印象笔记（Evernote）、Blogger、Medium、Tumblr、语雀、Ghost、少数派 Matrix。&lt;/li&gt;
+&lt;li&gt;图片上传服务（图床）支持 Imgur、七牛云、又拍云、腾讯云 COS、阿里云 OSS、SM.MS和自定义的图床服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;markdown-笔记&#34;&gt;Markdown 笔记：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;强大的文档库支持分类树和标签管理文档，文档可归类于多个分类，可以把分类整个导出为 Epub、PDF 和生成静态网站。非常合适用于笔记、个人知识收集、管理和输出。&lt;/li&gt;
+&lt;li&gt;快速笔记：随意增加笔记及图片等素材，支持以天为单位把增加的素材组合在一个文档内，方便整理及记录历史收集情况。&lt;/li&gt;
+&lt;li&gt;快速搜索：目前已支持全局快捷键调出搜索。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;外部-markdown-文档&#34;&gt;外部 Markdown 文档：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;外部 Markdown 文档使用外部模式管理。外部模式使用目录树的方式编辑和管理你的 Markdown 文档，还能很好的支持 GitBook、Jekyll、Hexo 等等编辑和图片插入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mweb-文档&#34;&gt;MWeb 文档：&lt;/h2&gt;
+&lt;p&gt;如果要更详细了解 MWeb，建议你一定要去看一下官网的帮助文档，网址为：&lt;a href=&#34;https://zh.mweb.im/help.html&#34;&gt;https://zh.mweb.im/help.html&lt;/a&gt;。我们建议在使用文档库之前，一定要阅读一下 &lt;a href=&#34;https://zh.mweb.im/mweb-library.html&#34;&gt;MWeb 文档库详细介绍&lt;/a&gt; 这篇文章，以便更好的使用文档库。&lt;/p&gt;
+&lt;h2 id=&#34;帮助我们改进-mweb&#34;&gt;帮助我们改进 MWeb&lt;/h2&gt;
+&lt;p&gt;如果你喜欢 MWeb，想让它变得更好，你可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;推荐 MWeb，让更多的人知道。&lt;/li&gt;
+&lt;li&gt;给我们发反馈和建议：&lt;a href=&#34;mailto:coderforart+2333@gmail.com&#34;&gt;coderforart+2333@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在 Mac App Store 上评价 （如果是在 MAS 上购买的话）。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
   </channel>
