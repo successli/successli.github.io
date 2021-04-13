@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | successli</title>
-    <link>/posts/</link>
-      <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    <description>Posts</description>
+    <title>golang | successli</title>
+    <link>/tags/golang/</link>
+      <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <description>golang</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>浅谈 Go 语言 slice 数据结构</title>
