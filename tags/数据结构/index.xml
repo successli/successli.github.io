@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据结构 | successli</title>
+    <link>/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <atom:link href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <description>数据结构</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>浅谈 Go 语言 slice 数据结构</title>
+      <link>/posts/golang-slice/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>/posts/golang-slice/</guid>
+      <description>&lt;h3 id=&#34;1-slice-底层实现&#34;&gt;1. slice 底层实现&lt;/h3&gt;
+&lt;p&gt;slice 是 go 语言中的可变数组。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;slice&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; {
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;array&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;unsafe&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Pointer&lt;/span&gt;
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;len&lt;/span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;cap&lt;/span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看源码发现，slice 并不是数组或数组指针，而是一个 struct 结构体，底层维护一个内部指针，通过 len 和 cap 记录指针指向数组的属性，以实现可变数组。&lt;/p&gt;
+&lt;p&gt;了解到 slice 底层的数据结构，可以帮助我们理解，为什么在 go 语言中，函数入参都是值传递的情况下，依旧可以在函数内部修改 slice 的数据。&lt;/p&gt;
+&lt;p&gt;根本原因还是在于 slice 底层存储数据的数据结构是指针，当函数入参为 slice 时，虽然是值传递，但实际上是底层变量 array 的地址，因此，在函数内部修改 slice，实际上是在修改 array 地址指向的值。&lt;/p&gt;
+&lt;h3 id=&#34;2-基于已有-slice-创建新-slice&#34;&gt;2. 基于已有 slice 创建新 slice&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; [&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;]&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;{&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;}
+&lt;span style=&#34;color:#75715e&#34;&gt;// data[:3:6]==data[0:3:6]   {0,1,2}               len=3 cap=6
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// data[6:]==data[6:10:10]   {6,7,8,9}             len=4 cap=4
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// data[:6]==data[0:6:10]    {0,1,2,3,4,5}         len=6 cap=10
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// data[:]==data[0:10:10]    {0,1,2,3,4,5,6,7,8,9} len=10 cap=10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;当我们基于已有 slice 创建新 slice 时，我们需要记住以下规则：
+以 data[low:hight:max] 为例&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;遵循 [low, high) 左闭右开原则&lt;/li&gt;
+&lt;li&gt;len = high - low&lt;/li&gt;
+&lt;li&gt;cap = max - low&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-理解-slice-入参下的函数值传递&#34;&gt;3. 理解 slice 入参下的函数值传递&lt;/h3&gt;
+&lt;p&gt;下面通过一个例子来实践我们对 slice 数据结构的理解&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 程序输出是什么
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; []&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;{&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;}
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt; = append(&lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;sliceAddOne&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt;)
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;sliceAddOne&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt;)
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt;)
+}
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sliceAddOne&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt; []&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;) {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt; = append(&lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;range&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt; {
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;让我们来思考一下，调用 &lt;code&gt;sliceAddOne(s1)&lt;/code&gt; 的时候发生了什么？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先，需要明确的是，函数是值传递；当 s1 传入函数时，由于 s1 的 cap 和 len 相等，所以 append 方法发生了 slice 扩容，扩容的 s1 cap 是原来 len 的 2 倍，底层 array 指针的地址发生了改变，sliceAddOne 函数后续的代码都是基于新的 array 指针地址进行操作，完全没有影响外部的 s1 slice；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后，s2 在调用 sliceAddOne 方法之前已经发生了扩容，扩容之后 cap 是 4，因此，当 s2 传入到函数中，再次 append 时，此时不需要扩容，因此 s2 地址不发生变化，函数内部操作的就是 s2 本身，但由于函数是值传递，所以函数内部的 append 结果没有作用到外部的 s2 上，最终，s2={2,3,4}&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后发现，s1={1,2}, s2={2,3,4}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;从这个例子，我们了解到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;append 方法的扩容算法&lt;/li&gt;
+&lt;li&gt;函数的值传递作用在 slice 上的底层原理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;p&gt;希望以上的例子和归纳总结，能够帮助你更好的理解 go 语言基本数据结构 slice&lt;/p&gt;
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/src/runtime/slice.go&#34;&gt;Documentation: runtime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/qyuhen/book&#34;&gt;Go 学习笔记 第四版&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
