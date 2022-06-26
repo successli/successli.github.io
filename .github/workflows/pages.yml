@@ -31,7 +31,6 @@ jobs:
       uses: sma11black/hexo-action@v1.0.3
       with:
         deploy_key: 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
-        publish_dir: ./public
         # user_name: your github username  # (or delete this input setting to use bot account)
         # user_email: your github useremail  # (or delete this input setting to use bot account)
         # commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
