@@ -47,6 +47,8 @@ jobs:
           git config --global user.name "successli"
 
       - name: Hexo Deploy
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
           hexo clean
           hexo generate

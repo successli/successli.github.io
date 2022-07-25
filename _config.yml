@@ -104,4 +104,4 @@ theme: vexo
 deploy:
   type: git
   repo: https://github.com/successli/successli.github.io
-  token: ${{ secrets.DEPLOY_KEY }}
+  token: $DEPLOY_KEY
