@@ -45,6 +45,7 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.email "successli@outlook.com"
           git config --global user.name "successli"
+          git config --global init.defaultBranch main
 
       - name: Hexo Deploy
         env:
