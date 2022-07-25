@@ -51,5 +51,4 @@ jobs:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
           hexo clean
-          hexo generate
           hexo deploy
